@@ -1,3 +1,5 @@
+// The purpose of the program is to make Black Jack game with 10 cards.
+
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
@@ -128,19 +130,7 @@ int main() {
 		}
 
 	}
-	//else {
-		//if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > dlcard_1 + dlcard_2 + dlcard_3) {
-
-			//cout << "You win!" << endl;
-			//cout << endl;
-			//return 0;
-		//}
-		//else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 <= dlcard_1 + dlcard_2 + dlcard_3) {
-		
-			//cout << "You lose!" << endl;
-			//return 0;
-		//}
-	//}
+	
 	if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > dlcard_1 + dlcard_2 + dlcard_3) {
 
 		cout << "You win!" << endl;
