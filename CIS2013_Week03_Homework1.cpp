@@ -43,10 +43,12 @@ int main() {
 		if (plcard_1 + plcard_2 + plcard_3 > 21) {
 
 			cout << "You lose!" << endl;
+			return 0;
 		}
 		else if (plcard_1 + plcard_2 + plcard_3 == 21) {
 
 			cout << "You win!" << endl;
+			return 0;
 		}
 
 		else if (plcard_1 + plcard_2 + plcard_3 < 21) {
@@ -62,10 +64,12 @@ int main() {
 			if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > 21) {
 
 				cout << "You lose!" << endl;
+				return 0;
 			}
 			else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 == 21) {
 
 				cout << "You win!" << endl;
+				return 0;
 			}
 
 			else
@@ -89,14 +93,34 @@ int main() {
 		cout << "the dealer's third  card is " << dlcard_3 << endl;
 		cout << " The total value of dealer's hand is " << dlcard_1 + dlcard_2 + dlcard_3 << endl;
 
+		if (dlcard_1 + dlcard_2 + dlcard_3 == 21) {
+			cout << "The dealer wins! ";
+		return 0;
+		}
+		else if (dlcard_1 + dlcard_2 + dlcard_3 > 21) {
+			cout << "The dealer loses!";
+				return 0;
+		}
+
 	}
 	else {
 		if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3) {
 
 			cout << "You win!" << endl;
 		}
+		else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 < dlcard_1 + dlcard_2 + dlcard_3) {
+		
+			cout << "You lose!" << endl;
+		}
 	}
+	if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3) {
 
+		cout << "You win!" << endl;
+	}
+	else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 < dlcard_1 + dlcard_2 + dlcard_3) {
+
+		cout << "You lose!" << endl;
+	}
 
 	return 0;
 }
