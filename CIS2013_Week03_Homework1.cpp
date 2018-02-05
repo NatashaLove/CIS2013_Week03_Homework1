@@ -129,11 +129,11 @@ int main() {
 
 	}
 	
-	if (plcard_1 + plcard_2 + plcard_3 > dlcard_1 + dlcard_2 + dlcard_3 || plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3 || plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > dlcard_1 + dlcard_2 + dlcard_3) {
+	if (((plcard_1 + plcard_2 + plcard_3) > (dlcard_1 + dlcard_2 + dlcard_3)) || ((plcard_1 + plcard_2 + plcard_3 + plcard_4) > (dlcard_1 + dlcard_2 + dlcard_3)) || ((plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5) > (dlcard_1 + dlcard_2 + dlcard_3))) {
 
 		cout << "You win!" << endl;
 	}
-	else if (plcard_1 + plcard_2 + plcard_3 <= dlcard_1 + dlcard_2 + dlcard_3 || plcard_1 + plcard_2 + plcard_3 + plcard_4 <= dlcard_1 + dlcard_2 + dlcard_3 || plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 <= dlcard_1 + dlcard_2 + dlcard_3) {
+	else if (((plcard_1 + plcard_2 + plcard_3) <= (dlcard_1 + dlcard_2 + dlcard_3)) || ((plcard_1 + plcard_2 + plcard_3 + plcard_4) <= (dlcard_1 + dlcard_2 + dlcard_3)) || ((plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5)) <= ((dlcard_1 + dlcard_2 + dlcard_3))) {
 
 		cout << "You lose!" << endl;
 	}
