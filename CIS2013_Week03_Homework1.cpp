@@ -7,24 +7,24 @@ using namespace std;
 int main() {
 	srand(time(NULL));
 	char question = 'y';
-	
+	/* generate numbers - player's cards - between 1 and 10: */
+	int plcard_1 = rand() % 10 + 1;
+	int plcard_2 = rand() % 10 + 1;
+	int plcard_3 = rand() % 10 + 1;
+	int plcard_4 = rand() % 10 + 1;
+
+	/* generate numbers - dealer's cards - between 1 and 10: */
+	int dlcard_1 = rand() % 10 + 1;
+	int dlcard_2 = rand() % 10 + 1;
+	int dlcard_3 = rand() % 10 + 1;
 
 	cout << "Welcome to Black Jack!"<< endl;
 	cout << "Take 2 cards" << endl;
 	cout << endl;
 
-	/* generate number between 1 and 10: */
-	int plcard_1 = rand() % 10 + 1;
-
 	cout << "your first card is " << plcard_1 << endl;
 
-	/* generate number between 1 and 10: */
-	int plcard_2 = rand() % 10 + 1;
-
 	cout << "your second card is " << plcard_2 << endl;
-
-	/* generate number between 1 and 10: */
-	int dlcard_1 = rand() % 10 + 1;
 
 	cout << endl;
 	cout << "the dealer's card is " << dlcard_1 << endl;
@@ -35,7 +35,6 @@ int main() {
 	cin >> question;
 
 	if (question == 'y') {
-		int plcard_3 = rand() % 10 + 1;
 
 		cout << "your third card is " << plcard_3 << endl;
 
@@ -55,7 +54,6 @@ int main() {
 			cin >> question;
 		}
 		if (question == 'y') {
-			int plcard_4 = rand() % 10 + 1;
 
 			cout << "your fourth card is " << plcard_4 << endl;
 
@@ -77,26 +75,27 @@ int main() {
 	}
 	
 		else {
-			/* generate number between 1 and 10: */
-			int dlcard_2 = rand() % 10 + 1;
 
 			cout << endl;
 			cout << "the dealer's second card is " << dlcard_2 << endl;
 		}
-	
-	cout << endl;
-
-	/* generate number between 1 and 10: */
-	int dlcard_2 = rand() % 10 + 1;
 
 	cout << endl;
 	cout << "the dealer's second card is " << dlcard_2 << endl;
 
+	if (dlcard_1 + dlcard_2 <= 16) {
 
+		cout << endl;
+		cout << "the dealer's third  card is " << dlcard_3 << endl;
+		cout << " The total value of dealer's hand is " << dlcard_1 + dlcard_2 + dlcard_3 << endl;
 
+	}
+	else {
+		if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3) {
 
-
-
+			cout << "You win!" << endl;
+		}
+	}
 
 
 	return 0;
