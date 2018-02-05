@@ -34,29 +34,47 @@ int main() {
 	cout << "Do you want to hit more? y/n" << endl;
 	cin >> question;
 
+	if (question == 'y') {
+		int plcard_3 = rand() % 10 + 1;
+
+		cout << "your third card is " << plcard_3 << endl;
+
+		cout << " The total value of your hand is " << plcard_1 + plcard_2 + plcard_3 << endl;
+
+		if (plcard_1 + plcard_2 + plcard_3 > 21) {
+
+			cout << "You lose!" << endl;
+		}
+		else if (plcard_1 + plcard_2 + plcard_3 == 21) {
+
+			cout << "You win!" << endl;
+		}
+
+		else if (plcard_1 + plcard_2 + plcard_3 < 21) {
+			cout << "Do you want to hit more? y/n" << endl;
+			cin >> question;
+		}
 		if (question == 'y') {
-			int plcard_3 = rand() % 10 + 1;
+			int plcard_4 = rand() % 10 + 1;
 
-			cout << "your third card is " << plcard_3 << endl;
+			cout << "your fourth card is " << plcard_4 << endl;
 
-			cout << " The total value of your hand is " << plcard_1 + plcard_2 + plcard_3 << endl;
+			cout << " The total value of your hand is " << plcard_1 + plcard_2 + plcard_3 + plcard_4 << endl;
 
-			if (plcard_1 + plcard_2 + plcard_3 > 21) {
+			if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > 21) {
 
 				cout << "You lose!" << endl;
 			}
-			else if (plcard_1 + plcard_2 + plcard_3 == 21) {
+			else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 == 21) {
 
 				cout << "You win!" << endl;
 			}
 
-			else if (plcard_1 + plcard_2 + plcard_3 < 21) {
-				cout << "Do you want to hit more? y/n" << endl;
-				cin >> question;
-			}
-		
+			else
+				cout << endl;
+				cout << "The dealer's turn" << endl;
+		}
 	}
-	
 	
 		else {
 			/* generate number between 1 and 10: */
@@ -68,6 +86,11 @@ int main() {
 	
 	cout << endl;
 
+	/* generate number between 1 and 10: */
+	int dlcard_2 = rand() % 10 + 1;
+
+	cout << endl;
+	cout << "the dealer's second card is " << dlcard_2 << endl;
 
 
 
