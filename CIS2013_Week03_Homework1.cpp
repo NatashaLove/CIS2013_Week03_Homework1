@@ -12,13 +12,16 @@ int main() {
 	int plcard_2 = rand() % 10 + 1;
 	int plcard_3 = rand() % 10 + 1;
 	int plcard_4 = rand() % 10 + 1;
+	int plcard_5 = rand() % 10 + 1;
 
 	/* generate numbers - dealer's cards - between 1 and 10: */
 	int dlcard_1 = rand() % 10 + 1;
 	int dlcard_2 = rand() % 10 + 1;
 	int dlcard_3 = rand() % 10 + 1;
 
+	cout << endl;
 	cout << "Welcome to Black Jack!"<< endl;
+	cout << endl;
 	cout << "Take 2 cards" << endl;
 	cout << endl;
 
@@ -72,19 +75,41 @@ int main() {
 				return 0;
 			}
 
-			else
+			else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 < 21) {
+
+				cout << "Do you want to hit more? y/n" << endl;
+				cin >> question;
+			}
+			if (question == 'y') {
+
+				cout << "your fifth card is " << plcard_5 << endl;
+
+				cout << " The total value of your hand is " << plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 << endl;
+
+				if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 == 21) {
+
+					cout << "You win!";
+					return 0;
+				}
+				else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > 21) {
+
+					cout << "You lose!";
+
+					return 0;
+				}
+			}
+			else if (question == 'n')
 				cout << endl;
 				cout << "The dealer's turn" << endl;
+			
 		}
 	}
-	
 		else {
 
 			cout << endl;
 			cout << "the dealer's second card is " << dlcard_2 << endl;
 		}
-
-	cout << endl;
+		cout << endl;
 	cout << "the dealer's second card is " << dlcard_2 << endl;
 
 	if (dlcard_1 + dlcard_2 <= 16) {
@@ -103,21 +128,24 @@ int main() {
 		}
 
 	}
-	else {
-		if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3) {
+	//else {
+		//if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > dlcard_1 + dlcard_2 + dlcard_3) {
 
-			cout << "You win!" << endl;
-		}
-		else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 < dlcard_1 + dlcard_2 + dlcard_3) {
+			//cout << "You win!" << endl;
+			//cout << endl;
+			//return 0;
+		//}
+		//else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 <= dlcard_1 + dlcard_2 + dlcard_3) {
 		
-			cout << "You lose!" << endl;
-		}
-	}
-	if (plcard_1 + plcard_2 + plcard_3 + plcard_4 > dlcard_1 + dlcard_2 + dlcard_3) {
+			//cout << "You lose!" << endl;
+			//return 0;
+		//}
+	//}
+	if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 > dlcard_1 + dlcard_2 + dlcard_3) {
 
 		cout << "You win!" << endl;
 	}
-	else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 < dlcard_1 + dlcard_2 + dlcard_3) {
+	else if (plcard_1 + plcard_2 + plcard_3 + plcard_4 + plcard_5 <= dlcard_1 + dlcard_2 + dlcard_3) {
 
 		cout << "You lose!" << endl;
 	}
