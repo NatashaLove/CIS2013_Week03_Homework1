@@ -19,7 +19,7 @@ srand(time(NULL));
 	int dealer_card = rand() % 10 + 1;
  	
 	cout << endl;
-	cout << "Hello! " << endl;
+	cout << "Hello!!! " << endl;
 	cout << "Welcome to Black Jack!"<< endl;
 	cout << endl;
 	cout << "Take 2 cards" << endl;
@@ -40,6 +40,7 @@ srand(time(NULL));
 	cout << "Do you want to hit more? y/n" << endl;
 	cin >> question;
 
+	// loop for the player.
 	while (question == 'y') {
 	int player_card = rand() % 10 + 1;
 	
@@ -63,6 +64,8 @@ srand(time(NULL));
 	
 	}
 
+	// Loop for the dealer.
+	
 	do {
 	int dealer_card = rand() % 10 + 1;
 	cout << endl;
