@@ -78,6 +78,17 @@ srand(time(NULL));
 	}
 	while (dealer_total <= 16) ;
 		
+		if (dealer_total > 21) {
+
+			cout << "Dealer loses!" << endl;
+			return 0;
+		}
+		else if (dealer_total == 21) {
+
+			cout << "Dealer wins!" << endl;
+			return 0;
+		}
+		
 	if (player_total > dealer_total)
 		cout << " You win! " << endl;
 	else
