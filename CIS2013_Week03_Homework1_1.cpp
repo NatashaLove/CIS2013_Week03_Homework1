@@ -59,10 +59,16 @@ srand(time(NULL));
 		
 		cout << "Do you want to hit more? y/n" << endl;
 		cin >> question;
-
-	
 	
 	}
+	
+	cout << endl;
+	cout << "the dealer's card is " << dealer_card << endl;
+	dealer_total = dealer_total + dealer_card;
+	
+	cout << " The total value of dealer's hand is " << dealer_total << endl;
+	
+	
 	
 int total=500;
 	for(int i=1;i<=10;i++){
