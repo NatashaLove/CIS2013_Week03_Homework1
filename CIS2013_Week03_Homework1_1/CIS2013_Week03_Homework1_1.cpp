@@ -19,6 +19,7 @@ srand(time(NULL));
 	int dealer_card = rand() % 10 + 1;
  	
 	cout << endl;
+	cout << "Hello! " << endl;
 	cout << "Welcome to Black Jack!"<< endl;
 	cout << endl;
 	cout << "Take 2 cards" << endl;
@@ -61,21 +62,25 @@ srand(time(NULL));
 		cin >> question;
 	
 	}
-	
+
+	do {
+	int dealer_card = rand() % 10 + 1;
 	cout << endl;
 	cout << "the dealer's card is " << dealer_card << endl;
 	dealer_total = dealer_total + dealer_card;
-	
 	cout << " The total value of dealer's hand is " << dealer_total << endl;
 	
+	cout << endl;
 	
-	
-int total=500;
-	for(int i=1;i<=10;i++){
-		total=total+100;
-		cout << "Total is " << total << endl;
 	}
-
+	while (dealer_total <= 16) ;
+		
+	if (player_total > dealer_total)
+		cout << " You win! " << endl;
+	else
+		cout << " You lose! " << endl;
+		
+	
 return 0;
 
 }
